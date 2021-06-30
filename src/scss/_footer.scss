@@ -1,0 +1,66 @@
+.footer {
+    padding: 10px 5rem;
+    background: hsl(240, 10%, 16%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: hsl(240, 2%, 79%);
+    a {
+        text-decoration: none;
+        color: hsl(240, 2%, 79%);
+        transition: all 300ms ease-in-out;
+        &:hover {
+            color: white;
+        }
+    }
+    .top {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            font-family: 'Raleway', sans-serif;
+            display: flex;
+            align-items: center;
+            color: white;
+            img{
+                height: 1.7rem;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+        }
+
+        .contactLinks {
+            a {
+                &:not(:first-child) {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    .conclusion {
+        a {
+            font-weight: 700;
+            font-family: 'Righteous', cursive;
+        }
+    }
+
+    @media(max-width: 993px) {
+        padding: 30px 2rem;
+        .top {
+            font-size: small;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+    }
+    @media(max-width: 500px) {
+        .logo {
+            h2 {
+                font-size: smaller;
+            }
+        }
+    }
+}

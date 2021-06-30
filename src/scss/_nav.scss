@@ -1,0 +1,126 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+*,*::before,*::after {
+    box-sizing: inherit;
+}
+body {
+    font-family: 'Quicksand', sans-serif !important;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+nav {
+    a {
+        text-decoration: none;
+    }
+    font-family: 'Nunito', serif;
+    padding: 10px 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+        font-family: 'Raleway', sans-serif;
+        display: flex;
+        align-items: center;
+        color: hsl(233, 26%, 24%);
+        img{
+            height: 1.7rem;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        a {
+            color: rgb(0, 6, 19);
+            transition: all 300ms ease-in-out;
+            &:not(:first-child) {
+                margin-left: 3rem;
+            }
+            &:hover {
+                color: hsl(0, 0%, 20%);
+            }
+        }
+    }
+
+    #hamburger {
+        display: none;
+        cursor: pointer;
+        > span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: hsl(233, 26%, 24%);
+            transition: all 300ms ease-in-out;
+            transform-origin: 3px 1px;
+    
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    @media(max-width: 933px) {
+        padding: 10px 2rem;
+        .links {display: none;}
+        #hamburger {display: block;}
+    }
+    @media(max-width: 500px) {
+        .logo {
+            h2 {
+                font-size: smaller;
+            }
+        }
+    }
+}
+
+.mobilemenu {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 35px 6rem;
+    border-radius: 7px;
+    font-family: 'Nunito', serif;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    a {
+        font-size: larger;
+        text-decoration: none;
+        color: hsl(219, 30%, 18%);
+        font-weight: 700;
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+.App-header {
+    &.burger {
+        #hamburger {
+            > span:first-child {
+                transform: rotate(45deg);
+            }
+            >span:nth-child(2) {
+                opacity: 0;
+            }
+            >span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+        .home, .projects, .about, .contacts, .work ,.mainprojects {
+            opacity: 0.5;
+            background-image: linear-gradient(to bottom, hsl(219, 30%, 18%), hsla(219, 30%, 18%, 0.062));
+        }
+    }
+}

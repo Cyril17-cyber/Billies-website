@@ -1,0 +1,106 @@
+.about, .contacts {
+    padding: 30px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {width: 50%;}
+}
+.about {
+    color: #000513;
+    img {border-radius:  7px;}
+    span {font-weight: 700;}
+}
+.contacts {
+    color: #842214;
+    .links {
+        a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: #842314a8;
+            transition: all 300ms ease-in-out;
+            h3 {margin-left: 5px;}
+            &:hover {
+                color: #842214;
+            }
+        }
+    }
+    @media(max-width: 500px){
+        font-size: x-small;
+    }
+}
+
+.work {
+    padding: 30px 35px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .projects {
+        padding: 0px 35px 30px;
+        display: flex;
+        flex-direction: column;
+        img {
+            border-radius: 7px 7px 0px 0px;
+            height: 13rem;
+        }
+        .bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p {margin: 0px 0px 10px;}
+            a {
+                text-decoration: none;
+                color: white;
+                border-radius: 5px;
+                padding: 10px 20px;
+                background: #842214;
+                border: .5px solid #842214;
+                transition: all 300ms ease-in-out;
+                &:hover {
+                    color: #842214;
+                    background: white;
+                }
+            }
+        }
+    }
+    @media(max-width: 993px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .projects {
+            align-items: center;
+            img {
+                width: 13rem;
+            }
+        }
+    }
+}
+
+.mainprojects {
+    padding: 30px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .svg {width: 30%;}
+    .images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 3rem;
+        grid-column-gap: 5rem;
+        img {
+            border-radius: 7px;
+            border: 2.5px solid #842214;
+            width: 100%;
+            height: 24rem;
+            box-shadow: 7px 11px 4px 0px #848484;
+        }
+    }
+    @media(max-width:  993px) {
+        .images {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {height: 17rem;
+            width: 70%;}
+        }
+    }
+}
